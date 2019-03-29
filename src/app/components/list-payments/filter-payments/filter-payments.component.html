@@ -1,9 +1,18 @@
 <div class="filter-container">
   <div class="filter-input">
-    <input type="text" class="filter-input-text" placeholder="Seach by typing...">
+    <input type="text"
+          #filter
+          class="filter-input-text"
+          placeholder="Seach by typing..."
+          (keyup)="search(filter.value)"
+          />
   </div>
   <div class="filter-select">
       <div class="label">Sort by</div>
-      <div class="buttons">Sort by</div>
+      <div class="buttons">
+        <div class="btn btn-sort-date">DATE</div>
+        <div class="btn btn-sort-beneficiary">BENEFICIARY</div>
+        <div class="btn btn-sort-amount">AMOUNT</div>
+      </div>
   </div>
 </div>

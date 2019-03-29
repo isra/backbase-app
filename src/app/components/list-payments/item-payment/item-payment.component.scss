@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         border: 1px solid #f0efef;
-
+        margin: 0 5px 0 5px;
     }
 
     .status {
@@ -20,8 +20,8 @@
         width: 10%;
         text-align: center;
         img {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
         }
     }
     .data {
@@ -39,6 +39,7 @@
         width: 10%;
         font-weight: 600;
         text-align: right;
+        margin-right: 5px;
     }
 
     @media (max-width: 767.98px) {

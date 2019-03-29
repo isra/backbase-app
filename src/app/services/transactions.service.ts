@@ -22,7 +22,17 @@ export class TransactionsService {
     return this.http.get(this.url)
       .pipe(
       map(response => {
-        return response['data'];
+        return response['data'].map(e => {
+          return {
+            amount: e.amount,
+            categoryCode: e.categoryCode,
+            merchant: e.merchant,
+            merchantLogo: e.merchantLogo,
+            transactionDate: e.transactionDate,
+            transactionType: e.transactionType,
+            date4filter: `${e.merchant} ${e.transactionType}`
+          }
+        });
       })
     );
   }

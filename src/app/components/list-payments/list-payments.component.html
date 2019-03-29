@@ -1,4 +1,7 @@
-<app-filter-payments></app-filter-payments>
+<app-filter-payments
+  [items]="items"
+  (resultFilterTransactions)="resultFilterTransactions($event)"
+></app-filter-payments>
 <app-item-payment
   [item]="item"
   *ngFor="let item of items"

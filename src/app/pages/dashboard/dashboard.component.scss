@@ -13,6 +13,34 @@
         margin-left: 2%;
     }
 
+    .bar-container {
+        display: flex;
+        height: 40px;
+        display: flex;
+        color: #ffffff;
+        background-color: #0c8397;
+        .bar-container-left, .bar-container-right {
+            flex-grow: 0;
+            align-self: center;
+            margin: 0 5px;
+            img {
+                width: 20px;
+            }
+        }
+        .bar-container-title {
+            flex-grow: 1;
+            text-align: center;
+            align-self: center;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        display: none;
+    }
+
+
 
     @media (max-width: 767.98px) {
         .left {
@@ -21,6 +49,9 @@
         .right {
             width: 100%;
             margin-left: 0;
+        }
+        a {
+            display: block;
         }
     }
 

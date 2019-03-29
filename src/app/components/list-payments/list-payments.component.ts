@@ -33,4 +33,9 @@ export class ListPaymentsComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
 
+    resultFilterTransactions(items: Transaction[]): void {
+      console.log('resultFilterTransactions', items)
+      this.items = items;
+    }
+
 }

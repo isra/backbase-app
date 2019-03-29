@@ -2,9 +2,25 @@
 <app-layout-breadcrumb></app-layout-breadcrumb>
 <div class="container dashboard-home">
   <div class="left">
+      <div class="bar-container">
+        <div class="bar-container-left">
+            <img src="/assets/icons/exchange.png" alt="Transaction">
+        </div>
+        <div class="bar-container-title">Make a Transfer</div>
+        <div class="bar-container-right"></div>
+      </div>
       <app-tranfer></app-tranfer>
   </div>
   <div class="right">
+      <div class="bar-container">
+        <div class="bar-container-left">
+            <img src="/assets/icons/suitcase.png" alt="Transaction">
+        </div>
+        <div class="bar-container-title">Recent Transaction</div>
+        <div class="bar-container-right">
+          <a href="#">(make a transfer)</a>
+        </div>
+      </div>
       <app-list-payments></app-list-payments>
   </div>
 </div>
