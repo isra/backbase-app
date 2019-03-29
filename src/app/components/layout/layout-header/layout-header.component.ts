@@ -12,4 +12,11 @@ export class LayoutHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  logout(): void {
+    /**
+     * TODO
+     * Service for close session
+     */
+  }
+
 }

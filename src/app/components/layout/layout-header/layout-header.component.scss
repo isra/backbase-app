@@ -1,0 +1,26 @@
+:host {
+    .navbar {
+        box-shadow: 0 5px 8px #aaaaaa;
+        background-color: #ffffff;
+        border-bottom: 3px solid #FF6B0B;
+        color: #ffffff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        div {
+            margin: 0 10%;
+        }
+
+        a {
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .home {
+            img {
+                width: 150px;
+                height: 20px;
+            }
+        }
+    }
+}

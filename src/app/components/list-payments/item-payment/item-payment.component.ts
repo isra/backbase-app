@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+import { Transaction } from '../../../interfaces/transaction';
 
 @Component({
   selector: 'app-item-payment',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemPaymentComponent implements OnInit {
 
+  @Input() item: Transaction;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selected(): void {
+    console.log('selected');
   }
 
 }

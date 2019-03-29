@@ -1,3 +1,5 @@
-<p>
-  list-payments works!
-</p>
+<app-filter-payments></app-filter-payments>
+<app-item-payment
+  [item]="item"
+  *ngFor="let item of items"
+></app-item-payment>

@@ -1,3 +1,16 @@
-<p>
-  item-payment works!
-</p>
+<div class="box-item" (click)="selected()">
+  <div class="status" [ngStyle]="{'background-color':(item?.categoryCode || '#f3f3f3') }"></div>
+  <div class="date-transaction">
+    <p>{{item.transactionDate | dateMonthYear}}</p>
+  </div>
+  <div class="merchant">
+    <img src="{{item.merchantLogo}}" alt="Merchant">
+  </div>
+  <div class="data">
+    <p class="name-merchant">{{item.merchant}}</p>
+    <p class="type-transaction">{{item.transactionType}}</p>
+  </div>
+  <div class="amount">
+    <p>{{item.amount}}</p>
+  </div>
+</div>
