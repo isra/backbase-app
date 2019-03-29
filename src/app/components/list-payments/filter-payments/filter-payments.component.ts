@@ -10,32 +10,48 @@ import { templateRefExtractor } from '@angular/core/src/render3';
 })
 export class FilterPaymentsComponent implements OnInit {
 
-  @Output() resultFilterTransactions: EventEmitter<Transaction[]> = new EventEmitter<Transaction[]>();
+  filter: Filter = {
+    date: false,
+    beneficiary: false,
+    amount: false
+  };
+  typeFilter: string;
 
-  private _items: Transaction[];
-  private _itemsAfterFilter: Transaction[];
+  @Output() filterEmit: EventEmitter<any> = new EventEmitter<any>();
 
-  @Input()
-  set items(data:Transaction[]) {
-    this._items = data ? data : [];
-    this._itemsAfterFilter = Array.from(this._items);
+  constructor() {
+    this.typeFilter = '';
   }
-
-  constructor() { }
 
   ngOnInit() {
   }
 
   search(term: string): void {
-    if (term.trim()) {
-      this._itemsAfterFilter = Array.from(this._items.filter(item => item.date4filter.toLowerCase().indexOf(term.toLowerCase()) >= 0));
-    } else {
-      this._itemsAfterFilter = Array.from(this._items);
-    }
-    this.resultFilterTransactions.emit(this._itemsAfterFilter);
-    console.log(this._itemsAfterFilter);
-    console.log(this._items);
-
+    this.filterEmit.emit({
+      value: term.trim(),
+      type: this.typeFilter
+    });
   }
 
+
+
+  filterBy(filter): void {
+    this.resetFilters();
+    this.filter[filter] = true;
+    this.typeFilter = filter;
+  }
+
+  private resetFilters(): void {
+    this.filter.date = false;
+    this.filter.beneficiary = false;
+    this.filter.amount = false;
+  }
+
+}
+
+
+interface Filter {
+  date: boolean;
+  beneficiary: boolean;
+  amount: boolean;
 }

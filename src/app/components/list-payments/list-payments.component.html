@@ -1,8 +1,7 @@
 <app-filter-payments
-  [items]="items"
-  (resultFilterTransactions)="resultFilterTransactions($event)"
+  (filterEmit)="filterChanged($event)"
 ></app-filter-payments>
 <app-item-payment
   [item]="item"
-  *ngFor="let item of items"
+  *ngFor="let item of filtersItems"
 ></app-item-payment>

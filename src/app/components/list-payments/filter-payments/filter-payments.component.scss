@@ -35,6 +35,12 @@
         font-size: 12px;
         padding: 5px 3px;
         text-align: center;
+        cursor: pointer;
+        &.active {
+            color: #fd0000;
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 
     input[type=text] {

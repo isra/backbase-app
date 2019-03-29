@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 
+// Components
 import { ListPaymentsComponent } from './list-payments/list-payments.component';
 import { ItemPaymentComponent } from './list-payments/item-payment/item-payment.component';
 import { FilterPaymentsComponent } from './list-payments/filter-payments/filter-payments.component';
@@ -13,12 +14,18 @@ import { AlertSpinnerComponent } from './alert/alert-spinner/alert-spinner.compo
 import { AlertCommonComponent } from './alert/alert-common/alert-common.component';
 import { TranferComponent } from './tranfer/tranfer.component';
 
+// Pipes
 import { DateMonthYearPipe } from '../pipes/date-month-year.pipe';
+
+// Directives
+import { NumbersDirective } from '../directives/numbers.directive';
+
 
 
 @NgModule({
   declarations: [
     DateMonthYearPipe,
+    NumbersDirective,
     ListPaymentsComponent,
     ItemPaymentComponent,
     FilterPaymentsComponent,

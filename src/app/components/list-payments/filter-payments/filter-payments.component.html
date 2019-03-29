@@ -1,18 +1,18 @@
 <div class="filter-container">
   <div class="filter-input">
     <input type="text"
-          #filter
+          #filterInput
           class="filter-input-text"
           placeholder="Seach by typing..."
-          (keyup)="search(filter.value)"
+          (keyup)="search(filterInput.value)"
           />
   </div>
   <div class="filter-select">
       <div class="label">Sort by</div>
       <div class="buttons">
-        <div class="btn btn-sort-date">DATE</div>
-        <div class="btn btn-sort-beneficiary">BENEFICIARY</div>
-        <div class="btn btn-sort-amount">AMOUNT</div>
+        <div class="btn btn-sort-date" [ngClass]="{'active': filter.date}" (click)="filterBy('date')">DATE</div>
+        <div class="btn btn-sort-beneficiary" [ngClass]="{ 'active': filter.beneficiary }" (click)="filterBy('beneficiary')">BENEFICIARY</div>
+        <div class="btn btn-sort-amount" [ngClass]="{'active': filter.amount}" (click)="filterBy('amount')">AMOUNT</div>
       </div>
   </div>
 </div>

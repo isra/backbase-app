@@ -1,0 +1,33 @@
+<div class="filter-container">
+    <div class="filter-input">
+      <label for="fromAccount" class="input-text">FROM ACCOUNT</label>
+      <input type="text"
+            id="fromAccount"
+            class="filter-input-text"
+            value="Free Checking(4692) - $5824.76"
+            disabled
+            />
+    </div>
+    <div class="filter-input">
+      <label for="toAccount" class="input-text">TO ACCOUNT</label>
+        <div class="select-merchant">
+            <select #toAccount name="toAccount" id="toAccount" placeholder="Search merchant..."></select>
+        </div>
+    </div>
+    <div class="filter-input">
+      <label for="amount" class="input-text">AMOUNT</label>
+      <input type="text"
+            #amountInput
+            id="amount"
+            class="filter-input-text"
+            placeholder="0.00"
+            (keyup)="validAmount(amountInput.value)"
+            appNumbers
+            />
+    </div>
+    <div class="filter-input">
+        <div class="buttons">
+            <button [ngClass]="{'active': continue}">SUBMIT</button>
+        </div>
+    </div>
+  </div>

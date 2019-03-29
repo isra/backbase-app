@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/selectize/dist/css/selectize.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/selectize/dist/js/standalone/selectize.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

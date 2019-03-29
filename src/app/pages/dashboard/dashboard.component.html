@@ -9,7 +9,7 @@
         <div class="bar-container-title">Make a Transfer</div>
         <div class="bar-container-right"></div>
       </div>
-      <app-tranfer></app-tranfer>
+      <app-tranfer [items]="itemsTransaction"></app-tranfer>
   </div>
   <div class="right">
       <div class="bar-container">
@@ -21,7 +21,7 @@
           <a href="#">(make a transfer)</a>
         </div>
       </div>
-      <app-list-payments></app-list-payments>
+      <app-list-payments (itemsLoadingEmit)="itemsLoading($event)"></app-list-payments>
   </div>
 </div>
 <app-layout-footer></app-layout-footer>
