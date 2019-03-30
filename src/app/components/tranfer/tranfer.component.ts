@@ -129,7 +129,7 @@ TO </strong> ${this.merchant.merchant}`,
     }
   }
 
-  alertAccept(): void {
+  alertAccept(data: any): void {
 
     setTimeout(() => {
 
@@ -152,7 +152,7 @@ TO </strong> ${this.merchant.merchant}`,
 
   }
 
-  alertCancel(): void {
+  alertCancel(data: any): void {
 
     this.amount = 0;
     this.continue = false;
