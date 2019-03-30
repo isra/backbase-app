@@ -17,7 +17,7 @@ export class ItemPaymentComponent implements OnInit {
   }
 
   selected(): void {
-    console.log('selected');
+    console.log('selected', this.item);
   }
 
 }

@@ -26,13 +26,14 @@ export class ListPaymentsComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
-      this.subscription = this.transactionsService.getAll().subscribe((response: Transaction[]) => {
-        this.items = response;
-        this.filtersItems = response;
+      this.subscription = this.transactionsService.getResponse().subscribe((response: Transaction[]) => {
+        this.items = Array.from(response);
+        this.filtersItems = Array.from(response);
         this.itemsLoadingEmit.emit(this.items);
       }, err => {
         this.commonService.handleError('app-list-payments', err);
       });
+      this.transactionsService.getAll();
     }
 
     ngOnDestroy(): void {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Transaction } from '../../interfaces/transaction';
 
+import { CommonService } from '../../services/common.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,13 +12,18 @@ export class DashboardComponent implements OnInit {
 
   itemsTransaction: Transaction[];
 
-  constructor() { }
+  constructor(
+    private commonService: CommonService
+  ) {
+  }
 
   ngOnInit() {
+    this.commonService.showSpinner();
   }
 
   itemsLoading(items: Transaction[]): void {
     this.itemsTransaction = items;
+    this.commonService.hideSpinner();
   }
 
 }

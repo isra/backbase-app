@@ -7,7 +7,7 @@ export class DateMonthYearPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
 
-    const date = new Date(value);
+    const date = new Date(+value);
     const month = this.getMonthShowName(date.getMonth());
     const year = date.getFullYear().toString().substr(-2);
     return `${month}. ${year}`;

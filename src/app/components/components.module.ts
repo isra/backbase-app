@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,10 +14,13 @@ import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.comp
 import { LayoutBreadcrumbComponent } from './layout/layout-breadcrumb/layout-breadcrumb.component';
 import { AlertSpinnerComponent } from './alert/alert-spinner/alert-spinner.component';
 import { AlertCommonComponent } from './alert/alert-common/alert-common.component';
+import { AlertDialogComponent } from './alert/alert-dialog/alert-dialog.component';
 import { TranferComponent } from './tranfer/tranfer.component';
 
 // Pipes
 import { DateMonthYearPipe } from '../pipes/date-month-year.pipe';
+import { FormatNumbersPipe } from '../pipes/format-numbers.pipe';
+
 
 // Directives
 import { NumbersDirective } from '../directives/numbers.directive';
@@ -24,8 +29,6 @@ import { NumbersDirective } from '../directives/numbers.directive';
 
 @NgModule({
   declarations: [
-    DateMonthYearPipe,
-    NumbersDirective,
     ListPaymentsComponent,
     ItemPaymentComponent,
     FilterPaymentsComponent,
@@ -33,11 +36,16 @@ import { NumbersDirective } from '../directives/numbers.directive';
     LayoutFooterComponent,
     AlertSpinnerComponent,
     AlertCommonComponent,
+    AlertDialogComponent,
     LayoutBreadcrumbComponent,
-    TranferComponent
+    TranferComponent,
+    NumbersDirective,
+    DateMonthYearPipe,
+    FormatNumbersPipe
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule
   ],
   exports: [

@@ -1,3 +1,5 @@
+<!-- spinner alert  -->
+<app-alert-spinner></app-alert-spinner>
 <app-layout-header></app-layout-header>
 <app-layout-breadcrumb></app-layout-breadcrumb>
 <div class="container dashboard-home">
@@ -17,9 +19,9 @@
             <img src="/assets/icons/suitcase.png" alt="Transaction">
         </div>
         <div class="bar-container-title">Recent Transaction</div>
-        <div class="bar-container-right">
+        <!-- <div class="bar-container-right">
           <a href="#">(make a transfer)</a>
-        </div>
+        </div> -->
       </div>
       <app-list-payments (itemsLoadingEmit)="itemsLoading($event)"></app-list-payments>
   </div>
