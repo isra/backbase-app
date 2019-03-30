@@ -1,27 +1,40 @@
-# BackbaseApp
+# Angular 7
+I choose Angular 7 because is a great framework.
+There are many reasons, TypeScript, Google, Reusability, Improved Readability, Ease of Maintenance, etc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+# Run project
+- npm install
+- ng serve
 
-## Development server
+# principal components
+- app-dashboard
+    This is the principal layout for container the other elements.
+- app-list-payments:  Container the list of items and filters, this component knows all the logic for show information
+- app-tranfer: For transfer, receives the list of merchants, (TOBE: this should be called of a service, the list of merchants). This component valid the restriction "A User shouldn't be able to transfer money beyond a balance of $ -500.00."
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Pipes
+- dateMonthYear : For detail of dates in the list item
+- formatNumbers : show two decimals
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Directives
+- appNumbers : for the input value amount in the transaction
 
-## Build
+# Other components
+- Spinner
+- Alert
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Pluggin
+- selectize : https://selectize.github.io/selectize.js/
+    For make select of merchants
+- JQuery: for Selectize
 
-## Running unit tests
+# Note
+- Only two resolutions, mobile and ipad/desktop, this are a simple elements.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I hope have good luck.
 
-## Running end-to-end tests
+Regards.
+Isaac Salgado
+isra.iiss@gmail.com
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

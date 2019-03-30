@@ -13,7 +13,6 @@ import { LayoutHeaderComponent } from './layout/layout-header/layout-header.comp
 import { LayoutFooterComponent } from './layout/layout-footer/layout-footer.component';
 import { LayoutBreadcrumbComponent } from './layout/layout-breadcrumb/layout-breadcrumb.component';
 import { AlertSpinnerComponent } from './alert/alert-spinner/alert-spinner.component';
-import { AlertCommonComponent } from './alert/alert-common/alert-common.component';
 import { AlertDialogComponent } from './alert/alert-dialog/alert-dialog.component';
 import { TranferComponent } from './tranfer/tranfer.component';
 
@@ -35,7 +34,6 @@ import { NumbersDirective } from '../directives/numbers.directive';
     LayoutHeaderComponent,
     LayoutFooterComponent,
     AlertSpinnerComponent,
-    AlertCommonComponent,
     AlertDialogComponent,
     LayoutBreadcrumbComponent,
     TranferComponent,
@@ -54,8 +52,7 @@ import { NumbersDirective } from '../directives/numbers.directive';
     LayoutHeaderComponent,
     LayoutFooterComponent,
     LayoutBreadcrumbComponent,
-    AlertSpinnerComponent,
-    AlertCommonComponent
+    AlertSpinnerComponent
   ]
 })
 export class ComponentsModule { }
